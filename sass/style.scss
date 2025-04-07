@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+$primary: #FFA726;
+$secondary: #2196F3;
+$secondary-light: #BCE0FB;
+$black: #000;
+$white: #fff;
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.3rem solid $primary;
+    height: 4rem;
+    margin-bottom: 0.3rem;
+
+    img {
+        height: 3rem;
+        margin: 0.5rem;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        div {
+            display: flex;
+
+            form {
+                background-color: $secondary-light;
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+
+                input {
+                    background-color: transparent;
+                    font-size: 1rem;
+                }
+
+                img {
+                    height: 2rem;
+                    margin: 0.3rem;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $black;
+                background-color: $primary;
+                padding: 0.5rem;
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+main {
+    min-height: calc(100vh - 7.6rem);
+    max-width: 1040px;
+    margin: 0 auto;
+
+    &#index {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 0.5rem;
+
+        section {
+            background-color: $secondary-light;
+            border: 0.2rem solid $secondary;
+            border-radius: 0.5rem;
+
+            a {
+                text-decoration: none;
+                color: $primary;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+footer {
+    border-top: 0.3rem solid $primary;
+    height: 3rem;
+    margin-top: 0.3rem;
+
+    aside {
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+}
+
+// === Menu ===
+header {
+    input#menu {
+        display: none;
+    }
+}
+
+@media(max-width: 525px) {
+    header {
+        flex-direction: row-reverse;
+
+        nav {
+            div {
+                display: none;
+            }
+
+            label {
+                margin-left: 0.5rem;
+                border: 0.18rem solid $black;
+                width: 2.5rem;
+                height: 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                cursor: pointer;
+
+                span {
+                    border: 0.1rem solid $black;
+                    width: 1.6rem;
+                    height: 0.1rem;
+
+                    &:first-child {
+                        margin-top: 0.2rem;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0.2rem;
+                    }
+                }
+            }
+        }
+
+        input {
+            &#menu:checked~nav div {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                align-items: flex-start;
+                top: 3.1rem;
+                left: 0.5rem;
+            }
+        }
+    }
+}

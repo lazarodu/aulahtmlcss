@@ -32,29 +32,33 @@ header img {
     margin: 0.5rem;
 }
 
-header div {
+header nav {
     display: flex;
     align-items: center;
 }
 
-header div form {
+header nav div {
+    display: flex;
+}
+
+header nav div form {
     background-color: var(--secondary-light);
     border-radius: 1rem;
     display: flex;
     align-items: center;
 }
 
-header div form input {
+header nav div form input {
     background-color: transparent;
     font-size: 1rem;
 }
 
-header div form img {
+header nav div form img {
     height: 2rem;
     margin: 0.3rem;
 }
 
-header div a {
+header nav div a {
     text-decoration: none;
     color: var(--black);
     background-color: var(--primary);
