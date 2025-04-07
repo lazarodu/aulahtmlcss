@@ -6,23 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula de Web</title>
     <link rel="stylesheet" href="./css/style.css" media="all">
+    <link rel="stylesheet" href="./css/menu.css" media="all">
 </head>
 
 <body>
     <header>
         <img src="./img/logo.svg" alt="Imagem da Logo do Blog">
-        <div>
-            <form action="" method="post">
-                <img src="./img/lupa.png" alt="Imagem da lupa">
-                <input type="text" name="search" placeholder="Busca">
-            </form>
-            <a href="">Login</a>
-            <nav>
+        <input type="checkbox" id="menu">
+        <nav>
+            <label for="menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </nav>
-        </div>
+            </label>
+            <div>
+                <form action="" method="post">
+                    <img src="./img/lupa.png" alt="Imagem da lupa">
+                    <input type="text" name="search" placeholder="Busca">
+                </form>
+                <a href="">Login</a>
+            </div>
+        </nav>
     </header>
     <main id="artigo">
         <h3>Título</h3>
