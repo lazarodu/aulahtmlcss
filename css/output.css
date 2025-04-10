@@ -8,6 +8,34 @@
   font-family: Inter, sans-serif;
 }
 
+input#theme {
+  display: none;
+}
+
+.container {
+  background-color: #fff;
+  color: #000;
+}
+.container .switch {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+input#theme:checked ~ .container {
+  background-color: #000;
+  color: #fff;
+}
+input#theme:checked ~ .container .switch {
+  background-color: #fff;
+  color: #000;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
 header {
   display: flex;
   flex-direction: row;

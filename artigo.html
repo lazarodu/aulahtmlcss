@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula de Web</title>
-    <link rel="stylesheet" href="./css/style.css" media="all">
-    <link rel="stylesheet" href="./css/menu.css" media="all">
+    <link rel="stylesheet" href="./css/output.css" media="all">
 </head>
 
 <body>
-    <header>
-        <img src="./img/logo.svg" alt="Imagem da Logo do Blog">
+    <input type="checkbox" id="theme">
+    <header class="container">
+        <a href="index.html">
+            <img src="./img/logo.svg" alt="Imagem da Logo do Blog">
+        </a>
         <input type="checkbox" id="menu">
         <nav>
             <label for="menu">
@@ -25,16 +27,17 @@
                     <input type="text" name="search" placeholder="Busca">
                 </form>
                 <a href="">Login</a>
+                <label for="theme" class="switch">Trocar</label>
             </div>
         </nav>
     </header>
-    <main id="artigo">
+    <main id="artigo" class="container">
         <h3>Título</h3>
         <h5>autor, data</h5>
         <p>Descrição: Lorem ipsum dolor sit amet, consectetur</p>
 
     </main>
-    <footer>
+    <footer class="container">
         <aside>
             @blogweb
         </aside>

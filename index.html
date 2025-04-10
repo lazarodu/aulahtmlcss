@@ -9,8 +9,11 @@
 </head>
 
 <body>
-    <header>
-        <img src="./img/logo.svg" alt="Imagem da Logo do Blog">
+    <input type="checkbox" id="theme">
+    <header class="container">
+        <a href="index.html">
+            <img src="./img/logo.svg" alt="Imagem da Logo do Blog">
+        </a>
         <input type="checkbox" id="menu">
         <nav>
             <label for="menu">
@@ -24,10 +27,11 @@
                     <input type="text" name="search" placeholder="Busca">
                 </form>
                 <a href="">Login</a>
+                <label for="theme" class="switch">Trocar</label>
             </div>
         </nav>
     </header>
-    <main id="index">
+    <main id="index" class="container">
         <section>
             <h3>Título</h3>
             <h5>autor, data</h5>
@@ -47,7 +51,7 @@
             <a href="artigo.html">ver</a>
         </section>
     </main>
-    <footer>
+    <footer class="container">
         <aside>
             @blogweb
         </aside>

@@ -15,6 +15,38 @@ $secondary-light: #BCE0FB;
 $black: #000;
 $white: #fff;
 
+// dark mode
+$light-bg: #fff;
+$light-text: #000;
+$dark-bg: #000;
+$dark-text: #fff;
+
+@mixin theme($bg, $text) {
+    background-color: $bg;
+    color: $text;
+
+    .switch {
+        background-color: $text;
+        color: $bg;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+input#theme {
+    display: none;
+}
+
+.container {
+    @include theme($light-bg, $light-text)
+}
+
+input#theme:checked~.container {
+    @include theme($dark-bg, $dark-text)
+}
+
+
 header {
     display: flex;
     flex-direction: row;
